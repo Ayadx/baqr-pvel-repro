@@ -1,0 +1,81 @@
+{
+  "models": {
+    "baseline": {
+      "fn": 277,
+      "fp_defect": 1468,
+      "good_alarms": 282,
+      "good_boxes": 450,
+      "tp": 3273
+    },
+    "bce_top50": {
+      "fn": 329,
+      "fp_defect": 1040,
+      "good_alarms": 70,
+      "good_boxes": 84,
+      "tp": 3221
+    },
+    "clean_control": {
+      "fn": 238,
+      "fp_defect": 1978,
+      "good_alarms": 130,
+      "good_boxes": 197,
+      "tp": 3312
+    },
+    "entropy_baqr": {
+      "fn": 262,
+      "fp_defect": 1372,
+      "good_alarms": 83,
+      "good_boxes": 99,
+      "tp": 3288
+    },
+    "plain_baqr": {
+      "fn": 250,
+      "fp_defect": 1622,
+      "good_alarms": 103,
+      "good_boxes": 144,
+      "tp": 3300
+    }
+  },
+  "pairs": {
+    "clean_control_vs_plain_baqr": {
+      "annotated_objects": {
+        "both": 3272,
+        "comparator_only": 28,
+        "neither": 210,
+        "reference_only": 40
+      },
+      "cracks": {
+        "both": 232,
+        "comparator_only": 3,
+        "neither": 35,
+        "reference_only": 9
+      },
+      "good_images": {
+        "both": 93,
+        "comparator_only": 10,
+        "neither": 360,
+        "reference_only": 37
+      }
+    },
+    "plain_baqr_vs_bce_top50": {
+      "annotated_objects": {
+        "both": 3176,
+        "comparator_only": 45,
+        "neither": 205,
+        "reference_only": 124
+      },
+      "cracks": {
+        "both": 207,
+        "comparator_only": 4,
+        "neither": 40,
+        "reference_only": 28
+      },
+      "good_images": {
+        "both": 58,
+        "comparator_only": 12,
+        "neither": 385,
+        "reference_only": 45
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baqr-pvel-repro"
+version = "0.3.0"
+description = "BAQR auxiliary losses and reproducible PV-EL detection evaluation"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23,<3", "scipy>=1.9,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+plot = ["matplotlib>=3.6"]
+loss = ["torch>=1.11"]
+
+[project.scripts]
+baqr-recompute = "baqr_repro.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
