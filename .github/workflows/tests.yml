@@ -1,4 +1,4 @@
-name: Tests
+name: BAQR Tests
 
 on:
   push:
@@ -7,12 +7,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install
+
+      - name: Install dependencies
         run: python -m pip install -e '.[test]'
+
       - name: Run tests
         run: python -m pytest -q
